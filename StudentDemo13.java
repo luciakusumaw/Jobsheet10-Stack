@@ -11,6 +11,7 @@ public static void main(String[] args) {
     System.out.println("3. View Top Assignment");
     System.out.println("4. View Assignment List");
     System.out.println("5. View First Student (Bottom)");
+    System.out.println("6. Show Total Number of Assignments");
     System.out.print("Select: ");
     choice = scan.nextInt();
     scan.nextLine(); 
@@ -60,10 +61,15 @@ public static void main(String[] args) {
             System.out.println("The first student to submit was: " + first.name);
             }
             break;
-    
+
+        case 6:
+            int total = stack.getAssignmentCount();
+            System.out.println("Current assignments in stack: " + total);
+            break;
+
         default:
             System.out.println("Invalid choice.");
     }
-} while (choice >= 1 && choice <= 5);
+} while (choice >= 1 && choice <= 6);
 }
 }

@@ -68,4 +68,7 @@ public Student13 peekBottom() {
         return null;
     }
 }
+public int getAssignmentCount() {
+    return top + 1;
+}
 }

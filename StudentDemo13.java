@@ -10,6 +10,7 @@ public static void main(String[] args) {
     System.out.println("2. Grade Assignment");
     System.out.println("3. View Top Assignment");
     System.out.println("4. View Assignment List");
+    System.out.println("5. View First Student (Bottom)");
     System.out.print("Select: ");
     choice = scan.nextInt();
     scan.nextLine(); 
@@ -52,10 +53,17 @@ public static void main(String[] args) {
             System.out.println("Name\tNIM\tClass");
             stack.print();
             break;
-            
+
+        case 5:
+            Student13 first = stack.peekBottom();
+            if (first != null) {
+            System.out.println("The first student to submit was: " + first.name);
+            }
+            break;
+    
         default:
             System.out.println("Invalid choice.");
     }
-} while (choice >= 1 && choice <= 4);
+} while (choice >= 1 && choice <= 5);
 }
 }

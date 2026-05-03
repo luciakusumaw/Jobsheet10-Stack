@@ -60,4 +60,12 @@ void print(){
         } 
         System.out.println(""); 
     }
+public Student13 peekBottom() {
+    if (!isEmpty()) {
+        return stack[0];
+    } else {
+        System.out.println("Stack is empty!!");
+        return null;
+    }
+}
 }

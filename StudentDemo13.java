@@ -39,6 +39,8 @@ public static void main(String[] args) {
                 int score = scan.nextInt();
                 graded.grading(score);
                 System.out.printf("Assignment grade for %s is %d\n", graded.name, score);
+                String binary = stack.convertToBinary(score); 
+                System.out.printf("Assignment grade in binary is %s\n", binary);
             }
             break;
             

@@ -71,4 +71,18 @@ public Student13 peekBottom() {
 public int getAssignmentCount() {
     return top + 1;
 }
+
+String convertToBinary(int grade){ 
+        ConversionStack13 stack = new ConversionStack13(); 
+        while (grade > 0) { 
+            int mod = grade % 2; 
+            stack.push(mod); 
+            grade = grade / 2; 
+        } 
+        String binary = ""; 
+        while (!stack.isEmpty()) { 
+            binary += stack.pop(); 
+        } 
+        return binary; 
+    }
 }
